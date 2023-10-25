@@ -1,0 +1,57 @@
+def reciever(frame):
+	print("\nData recieved by reciever : ",frame) 
+	s=0
+	for i in frame:
+		s+=(int(i,2)) 
+	print(bin(s))
+	if(len(str(bin(s)))==5): 
+		su=str(bin(s))
+		carry = su[2:3]
+		su=su[3:5]
+		print("carry = ",carry,", sum = ",su) 
+		s=int(carry,2) + int(su,2)
+		checksum = (str(bin(s)))[2:4] 
+		print(checksum)
+		complement = ''
+		for i in checksum:
+			if (i=='0'):
+				complement+='1' 
+			else:
+				complement+='0'
+		print("After 1's complement = ",complement)
+		for i in complement: 
+			if i == '1':
+				print("Data has error")
+		return print("Data has no errors")
+def send():
+	data= str(input('Enter data to send: ')) 
+	i=0
+	fsize = 2
+	frame=[]
+	for i in range(0,len(data), fsize):
+		frame.append(data[i:i+fsize]) 
+	print("Frames = ",frame)
+	s=0
+	for i in frame:
+		s+=(int(i,2)) 
+		print(bin(s))
+	print(len(str(bin(s)))) 
+	if(len(str(bin(s)))==5):
+		su=str(bin(s))
+		carry = su[2:3]
+		su=su[3:5]
+		print("carry = ",carry,", sum = ",su) 
+		s=int(carry,2) + int(su,2)
+		checksum = (str(bin(s)))[2:4] 
+		print(checksum) 
+		complement = ''
+		for i in checksum:
+			if (i=='0'):
+				complement+='1' 
+			else:
+				complement+='0'
+		print("After 1's complement = ",complement)
+	frame.append(complement)
+	print("Data being sent to reciever : ",frame) 
+	reciever(frame)
+send()

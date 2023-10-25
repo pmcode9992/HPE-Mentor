@@ -1,0 +1,13 @@
+##String Manipulation
+
+Write a JavaScript program to convert a string to title case (capitalize the first letter of each word). 
+
+Demonstrate knowledge of string manipulation, looping, and basic JavaScript functions. 
+
+###Example
+> Input - hellowelcometohpe
+
+>Output - HelloWelcomeToHpe
+
+###Constraints
+>n.length()>=0 && n.length()<=100

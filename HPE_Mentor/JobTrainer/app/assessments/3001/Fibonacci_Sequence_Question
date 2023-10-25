@@ -1,0 +1,13 @@
+##Fibonacci Sequence
+
+Write a JavaScript function that returns the Fibonacci sequence up to a given number of terms. 
+
+This question helps hiring managers assess the interviewee’s understanding of fundamental algorithms in JavaScript. They expect the candidate to consider edge cases and handle errors. 
+
+###Example
+>Input - 3
+
+>Output - 0,1,1
+
+###Constraints
+> n>0 && n<20

@@ -1,0 +1,28 @@
+n = int(input("Enter number of nodes - "))
+distances = []
+
+print("Enter Distance table ")
+for i in range(n):
+	lst = []
+	for j in range(n):
+		r = int(input())
+		lst.append(r)
+	distances.append(lst)
+print("Distances between nodes in router")
+for i in range(n):
+	print(i, end= '  ')
+print('\n')
+for i in distances: print('  '.join(map(str, i)))
+source = int(input("Enter source node - "))
+visited = [ 0 for element in range(n)]
+next_node = source
+shortest = distances[source]
+print('First iteration ==> ', '  '.join(map(str,shortest)))
+
+for i in range(n):
+	for j in range(n):
+		if(shortest[i]>shortest[j]+distances[j][i]):
+			shortest[i]=shortest[j]+distances[j][i]
+	print('After iteration', i+2 ,' ==> ', '  '.join(map(str,shortest)))
+
+

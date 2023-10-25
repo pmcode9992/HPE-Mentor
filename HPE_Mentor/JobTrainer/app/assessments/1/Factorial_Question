@@ -1,0 +1,29 @@
+## Factorial of a Number
+
+>Write a  function to calculate the factorial of a given positive integer n. The factorial of a number n is the product of all positive integers from 1 to n. For example, the factorial of 5 is 5! = 5 * 4 * 3 * 2 * 1 = 120.
+
+>Your task is to create a function calculateFactorial that takes an integer n as its parameter and returns the factorial of n.
+
+
+### Constraints
+
+- The input integer n will be a positive integer (0 <= n <= 12).
+
+### Example
+
+Example 1:
+
+>Input: n = 5
+
+>Output: 120
+
+>Explanation: The factorial of 5 is 5! = 5 * 4 * 3 * 2 * 1 = 120.
+
+
+### Note
+
+- For input n = 5, the function should return 5! = 120 as explained above.
+
+- For input n = 0, the function should return 1 since the factorial of 0 is defined to be 1.
+
+- For input n = 10, the function should return 10! = 3628800.
